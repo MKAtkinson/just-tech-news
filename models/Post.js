@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
-// create our Post model
+const { Model, DataTypes } = require('sequelize')
+const sequelize = require('../config/connection')
+
 class Post extends Model {
   static upvote(body, models) {
     return models.Vote.create({
@@ -21,12 +21,11 @@ class Post extends Model {
             'vote_count'
           ]
         ]
-      });
-    });
+      })
+    })
   }
 }
 
-// create fields/columns for Post model
 Post.init(
   {
     id: {
